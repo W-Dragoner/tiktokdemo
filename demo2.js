@@ -18,11 +18,12 @@ var hiddenText = document.getElementById("hiddenText");
 // 添加原始按钮的点击事件监听器
 originalButton.addEventListener("click", function() {
   // 显示新按钮
-  newButton.style.display = "block";
-});
-setTimeout(function() {
+  setTimeout(function() {
     newButton.click();
   }, 2000);
+  newButton.style.display = "block";
+});
+
 // 添加新按钮的点击事件监听器
 newButton.addEventListener("click", function() {
   // 显示隐藏文本
