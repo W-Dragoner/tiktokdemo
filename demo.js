@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         tiktok Jump to all orders
 // @namespace    https://github.com/W-Dragoner/tiktokdemo
-// @version      2024-01-23
+// @version      1.1
 // @description  Automatically jump to all orders
 // @author       You
 // @match        https://dmall.jinritemai.com/ffa/morder/order/list
@@ -10,10 +10,10 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
+ setTimeout(function() {
+      'use strict';
+      var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
 
-    // 点击第一个div
-    divs[0].click();
-    setTimeout(clickFirstDiv, 2000);
-})();
+      // 点击第一个div
+      divs[0].click();
+    }, 2000);
