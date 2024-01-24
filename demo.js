@@ -15,4 +15,5 @@
 
     // 点击第一个div
     divs[0].click();
+    setTimeout(clickFirstDiv, 2000);
 })();
