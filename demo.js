@@ -1,16 +1,18 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
+// @name         tiktok Jump to all orders
+// @namespace    https://github.com/W-Dragoner/tiktokdemo
 // @version      2024-01-23
-// @description  try to take over the world!
+// @description  Automatically jump to all orders
 // @author       You
-// @match        https://blog.csdn.net/m0_72594605/article/details/132559545
+// @match        https://dmall.jinritemai.com/ffa/morder/order/list
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=csdn.net
+// @license      AGPL-3.0
 // @grant        none
 // ==/UserScript==
 
 (function() {
-    'use strict';
-    console.log('Hello world!!');
-    // Your code here...
+    var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
+
+    // 点击第一个div
+    divs[0].click();
 })();
