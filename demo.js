@@ -9,11 +9,20 @@
 // @license      AGPL-3.0
 // @grant        none
 // ==/UserScript==
+()=>{
+    'use strict';
+    var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
 
- setTimeout(function() {
-      'use strict';
-      var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
+    // 点击第一个div
+    divs[2].addEventListener('click', function() {
+      setTimeout(function() {
+        var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
+  
+        // 点击第一个div
+        divs[0].click();
+      }, 2000);
+    });
 
-      // 点击第一个div
-      divs[0].click();
-    }, 2000);
+
+ 
+  }
