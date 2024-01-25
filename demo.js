@@ -12,9 +12,60 @@
 (function(){
     'use strict';
     var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
+    var style = document.createElement("style");
+    style.innerHTML = `
+      #window {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: move;
+      }
 
-    // 点击第一个div
-    divs[2].addEventListener('click', function() {
+      #button {
+        width: 80px;
+        height: 30px;
+        background-color: yellow;
+        margin: 10px auto;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+      }
+    `;
+    document.head.appendChild(style);
+
+    var draggableElement = document.createElement("div");
+    draggableElement.id = "window";
+    document.body.appendChild(draggableElement);
+
+    var button = document.createElement("div");
+    button.id = "button";
+    button.innerText = "点击";
+    draggableElement.appendChild(button);
+
+    var offsetX, offsetY;
+
+    draggableElement.addEventListener("mousedown", function(event) {
+      offsetX = event.clientX - draggableElement.offsetLeft;
+      offsetY = event.clientY - draggableElement.offsetTop;
+    });
+
+    document.addEventListener("mousemove", function(event) {
+      if (offsetX !== undefined && offsetY !== undefined) {
+        draggableElement.style.left = (event.clientX - offsetX) + "px";
+        draggableElement.style.top = (event.clientY - offsetY) + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", function() {
+      offsetX = undefined;
+      offsetY = undefined;
+    });
+
+    button.addEventListener("click", function() {
       setTimeout(function() {
         var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
   
@@ -23,6 +74,7 @@
       }, 2000);
     });
 
-
- 
+   
+    // 点击第一个div
+   
   })();
