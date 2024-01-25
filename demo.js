@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         tiktok Jump to all orders
 // @namespace    https://github.com/W-Dragoner/tiktokdemo
-// @version      1.1
+// @version      1.2
 // @description  Automatically jump to all orders
 // @author       You
 // @match        https://dmall.jinritemai.com/ffa/morder/order/list
@@ -9,7 +9,7 @@
 // @license      AGPL-3.0
 // @grant        none
 // ==/UserScript==
-()=>{
+(function(){
     'use strict';
     var divs = document.getElementsByClassName("index_tabWrapper__-OQd7  ");
 
@@ -25,4 +25,4 @@
 
 
  
-  }
+  })();
